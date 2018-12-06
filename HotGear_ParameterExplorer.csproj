@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7DE72110-8860-4306-99AA-6FE43F164A9A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HotGear_ParameterExplorer</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI">
+      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2019\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2019\RevitAPIUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElementOverrideEventHandler.cs" />
+    <Compile Include="GlobalVar.cs" />
+    <Compile Include="HotGearAllInOne.Properties\Resources.cs" />
+    <Compile Include="HotGearAllInOne\CategorySelection.cs" />
+    <Compile Include="HotGearAllInOne\HotGear_Parameter_Explorer.cs" />
+    <Compile Include="HotGearAllInOne\WF_About.cs" />
+    <Compile Include="HotGearAllInOne\WF_ColorSplat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotGear\HotGearPackage.cs" />
+    <Compile Include="InstanceParameterCollector.cs" />
+    <Compile Include="LoadOpts.cs" />
+    <Compile Include="Method.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\AppEvents.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\AppEvents_Event.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Application.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Borders.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\DocEvents.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\DocEvents_Event.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Font.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Interior.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Range.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Sheets.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Window.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Workbook.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\WorkbookEvents.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\WorkbookEvents_Event.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Workbooks.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\Worksheet.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\XlAutoFilterOperator.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\XlLineStyle.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\XlPlatform.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\XlSaveAsAccessMode.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\_Application.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\_Workbook.cs" />
+    <Compile Include="Microsoft.Office.Interop.Excel\_Worksheet.cs" />
+    <Compile Include="MyFailuresPreProcessor.cs" />
+    <Compile Include="ParameterEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetElementOverrideEventHandler.cs" />
+    <Compile Include="TypeParameterCollector.cs" />
+    <Compile Include="TypeRenameEventHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HotGearAllInOne\Resources.gear.ico" />
+    <EmbeddedResource Include="HotGearAllInOne\Resources.gear.png" />
+    <EmbeddedResource Include="HotGearAllInOne\Resources.Instance.png" />
+    <EmbeddedResource Include="HotGearAllInOne\Resources.Instance_s.png" />
+    <EmbeddedResource Include="HotGearAllInOne\Resources.Type.png" />
+    <EmbeddedResource Include="HotGearAllInOne\Resources.Type_s.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,2 @@
+C:\Users\PowerUser\Downloads\HotGear\HotGear_ParameterExplorer\obj\x64\Debug\HotGear_ParameterExplorer.csproj.CoreCompileInputs.cache
+C:\Users\PowerUser\Downloads\HotGear\HotGear_ParameterExplorer\obj\x64\Debug\HotGear_ParameterExplorer.csprojResolveAssemblyReference.cache
